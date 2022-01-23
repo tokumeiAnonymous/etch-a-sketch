@@ -10,13 +10,14 @@
         <div class="title"> Pixel Drawing </div>
         <div class="container">
             <div class="features">
-                <label> Pen <input type="color"></label>
-                <label> Background <input type="color"></label>
-                <button> Rainbow </button>
-                <button> Eraser </button>
-                <button> Grid </button>
-                <label> Size <input type="range"></label>
-                <button> Clear </button>
+                <label> Pen <input id="pen" type="color" value="#39ff14" onchange="changePenColor(this.value)"></label>
+                <label> Background <input id="background" type="color" value="#262626" onchange="changeBgColor(this.value)"></label>
+                <button id="rainbow"> Rainbow </button>
+                <button id="eraser"> Eraser </button>
+                <button id="grid"> Show Grid </button>
+                <input id="size" type="range" min="2" max="64" step="1" value="16" 
+                onchange="createCell(this.value)">
+                <button id="clear" onclick="clearCanvas()"> Clear </button>
             </div>
             <div class="canvas">
 
